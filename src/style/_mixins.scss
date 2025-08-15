@@ -1,0 +1,40 @@
+@mixin onLargeDesktop {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin onMediumDesktop {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+
+@mixin onSmallDesktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin onLargeTablet {
+  @media (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin onSmallTablet {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (max-width: 540px) {
+    @content;
+  }
+}
+
+@mixin banner-responsive($padding, $radius, $p-font, $h3-font, $h3-line) {
+  @content;
+}

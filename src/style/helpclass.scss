@@ -1,0 +1,153 @@
+@use './_variables' as vars;
+@use './_mixins' as mixins;
+
+.df {
+  display: flex;
+}
+
+.fc {
+  flex-direction: column;
+}
+
+.fr {
+  flex-direction: row;
+}
+
+.justify-a {
+  justify-content: space-around;
+}
+
+.justify-b {
+  justify-content: space-between;
+}
+
+.justify-c {
+  justify-content: center;
+}
+
+.align-c {
+  align-items: center;
+}
+
+.align-s {
+  align-items: flex-start;
+}
+
+.align-e {
+  align-items: flex-end;
+}
+
+.green-text {
+  color: vars.$accent-green-color;
+}
+
+.yellowtail-text {
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.green-text {
+  color: vars.$accent-green-color;
+}
+
+.sec-subtitle {
+  font-size: 36px;
+  margin-bottom: 10px;
+
+  @include mixins.onLargeDesktop {
+    font-size: 32px;
+  }
+
+  @include mixins.onSmallTablet {
+    font-size: 18px;
+  }
+}
+
+.call-to-action-link {
+  width: max-content;
+  padding: 20px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.2s linear;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 20px;
+    margin-left: 15px;
+  }
+
+  i {
+    background-color: vars.$white-color;
+    color: #335B6B;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+
+  @include mixins.onLargeDesktop {
+    font-size: 17px;
+
+    img {
+      width: 17px;
+      margin-left: 10px;
+    }
+
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  @include mixins.onSmallTablet {
+    font-size: 10px;
+
+    img {
+      width: 10px;
+      margin-left: 5px;
+    }
+
+    i {
+      margin-left: 5px;
+    }
+  }
+}
+
+.vertical-paddings {
+padding: 150px 0;
+@include mixins.onLargeDesktop { padding: 75px 0;
+}
+@include mixins.onSmallDesktop { padding: 55px 0;
+}
+@include mixins.onLargeTablet { padding: 35px 0; }
+@include mixins.onSmallTablet { padding: 20px 0; }
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 160px;
+
+  @include mixins.onLargeDesktop {
+    padding: 0 100px;
+  }
+
+  @include mixins.onSmallDesktop {
+    padding: 0 50px;
+  }
+
+  @include mixins.onLargeTablet {
+    padding: 0 40px;
+  }
+
+  @include mixins.onSmallTablet {
+    padding: 0 30px;
+  }
+
+  @include mixins.onMobile {
+    padding: 0 15px;
+  }
+}

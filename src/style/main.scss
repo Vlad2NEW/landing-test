@@ -1,0 +1,11 @@
+@use "node_modules/@glidejs/glide/src/assets/sass/glide.core"; 
+@use "node_modules/@glidejs/glide/src/assets/sass/glide.theme" as glideTheme;
+
+@use './_variables';
+@use './_mixins';
+@use './normalize';
+@use './helpclass';
+@use './header';
+@use './content.scss';
+@use './product-card.scss';
+@use './about-us.scss';

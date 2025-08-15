@@ -1,0 +1,12 @@
+@use "sass:color";
+
+$text-color: #274C5B;
+$accent-green-color: #68A47F;
+$accent-yellow-color: #EFD372;
+$white-color: #fff;
+
+$primary-bg-color: $accent-green-color;
+$secondary-bg-color: $accent-yellow-color;
+$hover-bg-color: color.adjust($accent-green-color, $lightness: -10%);
+$input-border-color: color.adjust($text-color, $lightness: 40%);
+$burger-icon-color: $text-color;

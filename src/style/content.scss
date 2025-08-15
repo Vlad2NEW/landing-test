@@ -1,0 +1,305 @@
+@use './_variables' as vars;
+@use './_mixins' as mixins;
+
+// Секція 1
+.sec-1 {
+  background-image: url(../../assets/images/sec-1-bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  min-height: max-content;
+
+  .sec-1__content {
+    h1 {
+      font-size: 70px;
+      line-height: 72px;
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+
+    a {
+      background-color: vars.$accent-yellow-color;
+    }
+  }
+
+  @include mixins.onLargeDesktop {
+    .sec-1__content { h1 { font-size: 60px; line-height: 62px; } }
+  }
+
+  @include mixins.onSmallDesktop {
+    .sec-1__content { h1 { font-size: 50px; line-height: 52px; } }
+  }
+
+  @include mixins.onLargeTablet {
+    height: 70vh;
+    .sec-1__content { h1 { font-size: 40px; line-height: 42px; margin-bottom: 15px; } }
+  }
+
+  @include mixins.onSmallTablet {
+    .sec-1__content { h1 { font-size: 32px; line-height: 34px; margin-bottom: 10px; } }
+  }
+
+  @include mixins.onMobile {
+    height: 55vh;
+    .sec-1__content { h1 { font-size: 28px; line-height: 30px; } }
+  }
+}
+
+// Секція 2
+.sec-2 {
+  .sec-2__banner {
+    width: 45%;
+    aspect-ratio: 1/0.5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--1 {
+      background-image: url(../../assets/images/sec-2-banner-1.webp);
+      color: vars.$white-color;
+    }
+
+    &--2 {
+      background-image: url(../../assets/images/sec-2-banner-2.webp);
+    }
+
+    @include mixins.banner-responsive(50px, 30px, 36px, 40px, 42px);
+  }
+
+  @include mixins.onLargeDesktop { .sec-2__banner { @include mixins.banner-responsive(30px, 20px, 30px, 34px, 36px); } }
+  @include mixins.onSmallDesktop { .sec-2__banner { @include mixins.banner-responsive(20px, 15px, 24px, 30px, 32px); } }
+  @include mixins.onLargeTablet { .sec-2__banner { @include mixins.banner-responsive(15px, 15px, 20px, 24px, 26px); } }
+  @include mixins.onSmallTablet { .sec-2__banner { @include mixins.banner-responsive(10px, 10px, 16px, 20px, 22px); } }
+
+  @include mixins.onMobile {
+    .sec-2__banner-wrapper { flex-direction: column; }
+    .sec-2__banner {
+      width: 90%;
+      &--1 { margin-bottom: 15px; }
+      @include mixins.banner-responsive(8px, 8px, 12px, 16px, 18px);
+    }
+  }
+}
+
+// Проміжні адаптивні стилі
+
+// max-width 1200px
+@include mixins.onMediumDesktop {
+  .sec-1 { height: 75vh; .sec-1__content { h1 { font-size: 55px; line-height: 57px; } } }
+  .sec-2__banner { @include mixins.banner-responsive(25px, 18px, 28px, 32px, 34px); }
+}
+
+// max-width 980px
+@include mixins.onSmallDesktop {
+  .sec-1 { height: 65vh; .sec-1__content { h1 { font-size: 45px; line-height: 47px; margin-bottom: 18px; } } }
+  .sec-2__banner { @include mixins.banner-responsive(18px, 15px, 22px, 28px, 30px); }
+}
+
+// max-width 540px
+@include mixins.onSmallTablet {
+  .sec-1 { height: 60vh; .sec-1__content { h1 { font-size: 30px; line-height: 32px; margin-bottom: 8px; } } }
+
+  .sec-2__banner-wrapper { flex-direction: column; align-items: center; }
+  .sec-2__banner {
+    width: 95%;
+    &--1 { margin-bottom: 12px; }
+    @include mixins.banner-responsive(8px, 8px, 14px, 18px, 20px);
+  }
+}
+
+.glide{
+  __bullets{
+    bottom: -2.5em;
+
+    @include mixins.onSmallTablet{
+      bottom: -2em;
+    }
+  }
+
+  &__bullet{
+    width: 15px;
+    height: 15px;
+    background-color: vars.$text-color;
+    opacity: 0.5;
+
+    &--active{
+      opacity: 1;
+    }
+    &:focus, &:hover{
+      background-color: vars.$text-color;
+      opacity: 0.8;
+      border: none;
+    }
+
+    @include mixins.onSmallDesktop{
+      width: 11px;
+      height: 11px;
+    }
+
+    @include mixins.onSmallTablet{
+      width: 9px;
+      height: 9px;
+    }
+  }
+}
+
+.sec5 {
+  background-image: url('./assets/images/sec-5-bg.png');
+  background-size: cover;
+  padding: 80px 0;
+
+  h2, h3 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .sec5-cards {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 100px;
+  }
+
+  .sec5-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+
+    .photo {
+      width: 115px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .rating {
+      font-size: 30px;
+      color: #ffa858;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .role {
+      font-size: 15px;
+      color: #777;
+    }
+  }
+
+  // Адаптив
+  @include mixins.onSmallDesktop {
+    .sec5-card {
+      .photo { width: 100px; }
+      .rating { font-size: 25px; }
+      .description { font-size: 16px; }
+      .name { font-size: 20px; }
+    }
+  }
+
+  @include mixins.onSmallTablet {
+    .sec5-card {
+      .photo { width: 90px; }
+      .rating { font-size: 22px; }
+      .description { font-size: 15px; }
+      .name { font-size: 18px; }
+    }
+  }
+
+  @include mixins.onMobile {
+    .sec5-card {
+      .photo { width: 80px; margin-bottom: 10px; }
+      .rating { font-size: 18px; margin-bottom: 10px; }
+      .description { font-size: 14px; }
+      .name { font-size: 16px; }
+      .role { font-size: 13px; }
+    }
+  }
+
+    .sec5-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+
+    @include mixins.onLargeDesktop {
+      gap: 25px;
+    }
+
+    @include mixins.onSmallDesktop {
+      gap: 20px;
+    }
+
+    @include mixins.onSmallTablet {
+      gap: 15px;
+    }
+
+    @include mixins.onMobile {
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .sec5-stats-block {
+      width: 210px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: #f1f1f1;
+      border: solid 2px #7eb693;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        text-align: center;
+        font-size: 18px;
+
+        strong {
+          font-size: 50px;
+
+          @include mixins.onSmallTablet {
+            font-size: 40px;
+          }
+
+          @include mixins.onMobile {
+            font-size: 35px;
+          }
+        }
+
+        @include mixins.onSmallTablet {
+          font-size: 16px;
+        }
+
+        @include mixins.onMobile {
+          font-size: 14px;
+        }
+      }
+
+      @include mixins.onSmallTablet {
+        width: 170px;
+      }
+
+      @include mixins.onMobile {
+        width: 140px;
+      }
+    }
+    }
+}

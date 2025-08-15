@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organic food</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./build/css/main.min.css">
+
+<link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+<link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/solid.min.css">
+
+
+</head>
+<body>
+  <header>
+    <div class="container df justify-b align-c desktop-menu">
+      <div class="logo">
+        <img src="./assets/images/logo.webp" alt="Organic">
+      </div>
+      <nav class="nav">
+        <ul class="df">
+          <li><a href="">About</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">News</a></li>
+        </ul>
+      </nav>
+      <div class="features df align-c">
+        <div class="search df align-c">
+          <input type="text">
+          <button type="button" class = "search-btn">
+            <img src="./assets/images/search-icon.svg" alt="Search">
+          </button>
+        </div>
+        <div class="cart df align-c">
+          <div class="cart-icon">
+            <img src="./assets/images/cart-icon.svg" alt="Cart">
+          </div>
+          <p>Cart (<span>0</span>)</p>
+        </div>
+      </div>
+    </div>
+    <div class="container df justify-b align-c mobile-menu">
+      <button type="button" class="burger df justify-c align-c" id="toggle-burger-menu">
+  <img src="./assets/images/burger-icon.svg" alt="Open burger menu" class="burger-icon">
+  <img src="./assets/images/cross-icon.svg" alt="Close burger menu" class="burger-icon hidden">
+</button>
+      <div class="logo">
+        <img src="./assets/images/logo.webp" alt="Organic">
+      </div>
+      <div class="features df align-c">
+        <div class="search df align-c">
+          <input type="text">
+          <button type="button" class="search-btn">
+            <img src="./assets/images/search-icon.svg" alt="Search">
+          </button>
+        </div>
+      </div>
+      <nav class="nav" id="mobile-nav">
+  <ul>
+    <li><a href="">About</a></li>
+    <li><a href="">Shop</a></li>
+    <li><a href="">Projects</a></li>
+    <li><a href="">News</a></li>
+  </ul>
+</nav>
+    </div>
+  </header>
+
+  <main>
+    <section class = "sec-1 df fc justify-c">
+      <div class="container">
+        <article class="sec-1__content">
+          <h2 class = "yellowtail-text green-text sec-subtitle">
+            100% Natural Food
+          </h2>
+          <h1>Choose the best <br> healthier way <br> of life.</h1>
+          <a href="" class = "df align-c call-to-action-link">
+            <span>Explore Now</span>
+            <i class = "fa-solid fa-circle-arrow-right"></i>
+          </a>
+        </article>
+      </div>
+    </section>
+    <section class = "sec-2 vertical-paddings">
+      <div class="container">
+        <div class = "sec-2__banner-wrapper df align-c justify-a">
+          <article class = "sec-2__banner sec-2__banner--1 df fc justify-c">
+            <p class="yellowtail-text">Natural!!</p>
+            <h3>Get Garden <br> Fresh Fruits</h3>
+          </article>
+          <article class = "sec-2__banner sec-2__banner--2 df fc justify-c">
+            <p class="yellowtail-text green-text">Offer!!</p>
+            <h3>Get 10% off <br>on Vegetables</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-3 vertical-paddings container">
+      <div class="sec-3__left">
+        <img src="./assets/images/sec-3-bg.png">
+      </div>
+
+      <div class="sec-3__right">
+        <h3 class = "sec-subtitle yellowtail-text green-text">About Us</h3>
+
+        <h2 class="sec-title">We Believe in Working <br> Accredited Farmers</h2>
+        <p>Simply dummy text of the printing and typesetting industry. Lorem has ceased to<br>
+        been the industry's standard dummy text ever since 1500s, when an unknown<br>
+        printer took a galley</p>
+
+        <ul>
+          <li>
+            <img src="./assets/images/sec-3-icon-1.png" alt="">
+          <h2 class="sec-title">Organic Foods Only</h2>
+          <p>Simply dummy text of the printing and typesetting industry. Lorem ipsum</p>
+          </li>
+          <li>
+            <img src="./assets/images/sec-3-icon-2.png" alt="">
+          <h2 class="sec-title">Quality Standards</h2>
+          <p>Simply dummy text of the printing and typesetting industry. Lorem ipsum</p>
+          </li>
+        </ul>
+
+        <a href="" class="call-to-action-link">
+          <span>Shop Now</span>
+          <i class = "fa-solid fa-circle-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="product-cards">
+      <div class = "sec-4-card product-card">
+        <p class="badge">Vegetable</p>
+        <div class="photo">
+          <img src="./assets/images/product-photo-1.png">
+        </div>
+
+        <p class="title">Calabrese Broccoli</p>
+        <div class = "info df align-e justify-b">
+          <p class="price">
+            <span class="full">$20.00</span>
+            <span class="discount">$13.00</span>
+          </p>
+          <div class="rating">
+            <span class="default">5 stars</span>
+            <span class="active">5 stars</span>
+          </div>
+        </div>
+        <a href="" class="buy">Add to cart</a>
+      </div>
+    </section>
+    <section class = "sec5 vertical-paddings container">
+      <h3 class = "sec-subtitle yellowtail-text green-text">Testimonial</h3>
+      <h2 class = "sec-title">What Our Cusomer Saying?</h2>
+
+      <div class="glide sec5-cards">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide sec5-card">
+          <span class="photo">
+            <img src="./assets/images/sec-5-photo-1.jpg" alt="Customer photo">
+          </span>
+          <span class="rating">★★★★★</span>
+          <span class="description">
+            Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text.
+          </span>
+          <span class="name">Sara Taylor</span>
+          <span class="role">Consumer</span>
+        </li>
+
+        <li class="glide__slide sec5-card">
+          <span class="photo">
+            <img src="./assets/images/sec-5-photo-1.jpg" alt="Customer photo">
+          </span>
+          <span class="rating">★★★★★</span>
+          <span class="description">
+            Excellent service and quality products. Highly recommend to everyone.
+          </span>
+          <span class="name">Sara Taylor</span>
+          <span class="role">Consumer</span>
+        </li>
+
+        <li class="glide__slide sec5-card">
+          <span class="photo">
+            <img src="./assets/images/sec-5-photo-1.jpg" alt="Customer photo">
+          </span>
+          <span class="rating">★★★★★</span>
+          <span class="description">
+            Great experience! Friendly staff and fresh organic products.
+          </span>
+          <span class="name">Sara Taylor</span>
+          <span class="role">Consumer</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+      <button class="glide__bullet" data-glide-dir="=0"></button>
+      <button class="glide__bullet" data-glide-dir="=1"></button>
+      <button class="glide__bullet" data-glide-dir="=2"></button>
+    </div>
+  </div>
+      <div class = "sec5-stats df align-c justify-c">
+        <div class = "sec5-stats-block df align-c justify-c">
+          <p><strong>100%</strong> <br> Organic</p>
+        </div>
+        <div class = "sec5-stats-block df align-c justify-c">
+          <p><strong>285</strong> <br> Organic</p>
+        </div>
+        <div class = "sec5-stats-block df align-c justify-c">
+          <p><strong>350+</strong> <br> Organic Orchads</p>
+        </div>
+        <div class = "sec5-stats-block df align-c justify-c">
+          <p><strong>25+</strong> <br> Years of Farming</p>
+        </div>
+      </div>
+  </section>
+  </main>
+  <script src="./build/js/app.min.js"></script>
+  <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  new Glide('.sec5-cards', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    gap: 30
+  }).mount();
+});
+</script>
+</body>
+</html>
