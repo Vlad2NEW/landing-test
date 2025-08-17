@@ -2,7 +2,18 @@
 @use './_mixins' as mixins;
 
 header {
-  background-color: vars.$white-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  background-color: vars.$white-color; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+
+  & + main {
+    margin-top: 120px; 
+  }
+
   color: vars.$text-color;
   padding: 60px 0;
 

@@ -1,0 +1,85 @@
+D:/ITVDN/Спеціальності/Frontend Developer/Курси/Практичний курс з верстки лендінгу/organic-food/assets/images
+
+  <section class = "sec-6 vertical-paddings container">
+    <div class = "sec-6-up df align-e justify-b">
+      <h4 class = "yellowtail-text green-text sec-subtitle">Offer</h4>
+      <h3 class = "sec-title">We Offer Organic For You</h3>
+      <a href="" class = "df align-c call-to-action-link">
+        <span>ViewAll Product</span>
+        <i class = "fa-solid fa-circle-arrow-right"></i>
+      </a>
+    </div>
+    <div class = "sec-6-cards product-cards">
+      <div class = "sec-6-card product-card">
+        <p class="badge">Vegetable</p>
+        <div class="photo">
+          <img src="./assets/images/product-photo-1.png">
+        </div>
+        <p class="title">Calabrese Broccoli</p>
+        <div class = "info df align-e justify-b">
+          <p class="price">
+            <span class="full">$20.00</span>
+            <span class="discount">$11.00</span>
+          </p>
+          <div class="rating">
+            <span class="default">5 stars</span>
+            <span class="active">5 stars</span>
+          </div>
+        </div>
+        </div>
+
+        <div class = "sec-6-card product-card">
+        <p class="badge">Fruit</p>
+        <div class="photo">
+          <img src="./assets/images/product-photo-2.png">
+        </div>
+        <p class="title">Banana</p>
+        <div class = "info df align-e justify-b">
+          <p class="price">
+            <span class="full">$20.00</span>
+            <span class="discount">$12.00</span>
+          </p>
+          <div class="rating">
+            <span class="default">5 stars</span>
+            <span class="active">5 stars</span>
+          </div>
+        </div>
+        </div>
+
+        <div class = "sec-6-card product-card">
+        <p class="badge">Vegetable</p>
+        <div class="photo">
+          <img src="./assets/images/product-photo-4.png">
+        </div>
+        <p class="title">Cherry Tomato</p>
+        <div class = "info df align-e justify-b">
+          <p class="price">
+            <span class="full">$20.00</span>
+            <span class="discount">$10.00</span>
+          </p>
+          <div class="rating">
+            <span class="default">5 stars</span>
+            <span class="active">5 stars</span>
+          </div>
+        </div>
+        </div>
+
+        <div class = "sec-6-card product-card">
+        <p class="badge">Egg</p>
+        <div class="photo">
+          <img src="./assets/images/product-photo-7.png">
+        </div>
+        <p class="title">Hen Egg</p>
+        <div class = "info df align-e justify-b">
+          <p class="price">
+            <span class="full">$20.00</span>
+            <span class="discount">$14.00</span>
+          </p>
+          <div class="rating">
+            <span class="default">5 stars</span>
+            <span class="active">5 stars</span>
+          </div>
+        </div>
+        </div>
+      </div>
+  </section>
