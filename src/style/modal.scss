@@ -2,7 +2,7 @@
 @use './_mixins' as mixins;
 
 .modals-wrapper {
-    z-index: 9999;
+  z-index: 9999;
   position: fixed;
   top: 0;
   right: 0;
@@ -75,7 +75,8 @@
       border-radius: 16px;
     }
 
-    p, li {
+    p,
+    li {
       font-size: 20px;
       line-height: 105%;
 
@@ -96,6 +97,32 @@
       }
     }
 
+    &#cart-modal {
+
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 0;
+          border-bottom: solid 1px vars.$text-color;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          i {
+            cursor: pointer;
+            transition: all 0.2s linear;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+
     @include mixins.onSmallDesktop {
       padding: 25px;
 
@@ -111,7 +138,8 @@
         margin-right: 15px;
       }
 
-      p, li {
+      p,
+      li {
         font-size: 16px;
       }
     }
@@ -125,7 +153,8 @@
         font-size: 24px;
       }
 
-      p, li {
+      p,
+      li {
         font-size: 14px;
       }
 
@@ -152,7 +181,8 @@
         border-radius: 8px;
       }
 
-      p, li {
+      p,
+      li {
         font-size: 12px;
       }
 

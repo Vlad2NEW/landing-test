@@ -90,6 +90,6 @@ D:/ITVDN/Спеціальності/Frontend Developer/Курси/Практич
 
 
 
+public key = nJqjKYE3F_7GJUDJ3
 gmail Id =   service_te4dxie
 template Id = template_kdz8ey9
-public key = nJqjKYE3F_7GJUDJ3

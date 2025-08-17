@@ -108,200 +108,353 @@
   }
 }
 
-.glide{
-  __bullets{
+.sec-4 {
+  h3, h2 {
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .sec-4-cards {
+    margin-bottom: 100px;
+  }
+
+  .sec-4-card:nth-child(n + 9) {
+    display: none;
+  }
+
+  button {
+    margin: 0 auto;
+    background-color: vars.$text-color;
+    color: vars.$white-color;
+  }
+
+  @include mixins.onLargeDesktop {
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .sec-4-cards {
+      margin-bottom: 80px;
+    }
+  }
+
+  @include mixins.onSmallDesktop {
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .sec-4-cards {
+      margin-bottom: 60px;
+    }
+
+    .sec-4-card:nth-child(n + 7) {
+      display: none;
+    }
+  }
+
+  @include mixins.onSmallTablet {
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    .sec-4-cards {
+      margin-bottom: 40px;
+    }
+
+    .sec-4-card:nth-child(n + 5) {
+      display: none;
+    }
+  }
+
+  @include mixins.onMobile {
+    .sec-4-cards {
+      margin-bottom: 25px;
+    }
+    
+    button {
+      padding: 7px;
+    }
+  }
+}
+
+.glide {
+  &__bullets {
     bottom: -2.5em;
 
-    @include mixins.onSmallTablet{
+    @include mixins.onSmallTablet {
       bottom: -2em;
     }
   }
 
-  &__bullet{
+  &__bullet {
     width: 15px;
     height: 15px;
     background-color: vars.$text-color;
     opacity: 0.5;
 
-    &--active{
+    &--active {
       opacity: 1;
     }
-    &:focus, &:hover{
+
+    &:focus, &:hover {
       background-color: vars.$text-color;
       opacity: 0.8;
       border: none;
     }
 
-    @include mixins.onSmallDesktop{
+    @include mixins.onSmallDesktop {
       width: 11px;
       height: 11px;
     }
 
-    @include mixins.onSmallTablet{
+    @include mixins.onSmallTablet {
       width: 9px;
       height: 9px;
     }
   }
 }
 
-.sec5 {
-  background-image: url('D:/ITVDN/Спеціальності/Frontend Developer/Курси/Практичний курс з верстки лендінгу/organic-food/assets/images/sec-5-bg.png');
+
+.sec-5 {
+  background-image: url(../../assets/images/sec-5-bg.png);
+  background-position: center;
   background-size: cover;
-  padding: 80px 0;
+  background-repeat: no-repeat;
 
   h2, h3 {
     text-align: center;
-    margin-bottom: 25px;
+  }
+
+  h2 {
+    margin-bottom: 40px;
   }
 
   .sec5-cards {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 100px;
+    width: 60%;
+    margin: 0 auto 150px;
   }
 
   .sec5-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 60px;
+    span {
+      display: block;
+      text-align: center;
 
-    .photo {
-      width: 115px;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-bottom: 20px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      &.photo {
+        width: 115px;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        overflow: hidden;
       }
-    }
 
-    .rating {
-      font-size: 30px;
-      color: #ffa858;
-      margin-bottom: 20px;
-    }
+      &.rating {
+        font-size: 30px;
+        font-weight: 700;
+        color: #FFA858;
+        margin-bottom: 25px;
+      }
 
-    .description {
-      font-size: 18px;
-      line-height: 1.4;
-      margin-bottom: 15px;
-    }
+      &.description {
+        font-size: 18px;
+        line-height: 110%;
+        margin-bottom: 20px;
+      }
 
-    .name {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
+      &.name {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
 
-    .role {
-      font-size: 15px;
-      color: #777;
+      &.role {
+        font-size: 15px;
+      }
     }
   }
 
-  // Адаптив
+  .sec5-stats {
+    gap: 60px;
+
+    @include mixins.onLargeDesktop {
+      gap: 40px;
+    }
+
+    @include mixins.onSmallDesktop {
+      gap: 30px;
+    }
+
+    @include mixins.onLargeTablet {
+      gap: 20px;
+    }
+
+    @include mixins.onMobile {
+      gap: 5px;
+    }
+  }
+
+  .sec5-stats-block {
+    width: 210px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #F1F1F1;
+    border: solid 2px #7EB693;
+
+
+    p {
+      text-align: center;
+      font-size: 18px;
+
+      strong {
+        font-size: 50px;
+      }
+    }
+  }
+
+  @include mixins.onLargeDesktop {
+    .sec5-stats {
+      gap: 40px;
+    }
+
+    .sec5-stats-block {
+      width: 170px;
+
+      p strong {
+        font-size: 40px;
+      }
+    }
+  }
+
   @include mixins.onSmallDesktop {
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .sec5-cards {
+      width: 70%;
+      margin-bottom: 100px;
+    }
+
     .sec5-card {
-      .photo { width: 100px; }
-      .rating { font-size: 25px; }
-      .description { font-size: 16px; }
-      .name { font-size: 20px; }
+      span {
+        &.photo {
+          width: 100px;
+          margin-bottom: 10px;
+        }
+        &.rating {
+          font-size: 25px;
+          margin-bottom: 15px;
+        }
+        &.description {
+          font-size: 16px;
+        }
+        &.name {
+          font-size: 23px;
+        }
+      }
+    }
+
+    .sec5-stats {
+      gap: 30px;
+    }
+
+    .sec5-stats-block {
+      width: 150px;
+
+      p {
+        font-size: 16px;
+
+        strong {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  @include mixins.onLargeTablet {
+    .sec5-cards {
+      margin-bottom: 80px;
+    }
+    .sec5-stats {
+      gap: 20px;
+    }
+    .sec5-stats-block {
+      width: 120px;
+
+      p {
+        font-size: 13px;
+
+        strong {
+          font-size: 22px;
+        }
+      }
     }
   }
 
   @include mixins.onSmallTablet {
+    .sec5-cards {
+      width: 95%;
+      margin-bottom: 60px;
+    }
     .sec5-card {
-      .photo { width: 90px; }
-      .rating { font-size: 22px; }
-      .description { font-size: 15px; }
-      .name { font-size: 18px; }
+      span {
+        &.photo {
+          width: 80px;
+          margin-bottom: 5px;
+        }
+        &.rating {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        &.description {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+        &.name {
+          font-size: 18px;
+        }
+      }
+    }
+    .sec5-stats-block {
+      width: 100px;
+
+      p {
+        font-size: 11px;
+
+        strong {
+          font-size: 18px;
+        }
+      }
     }
   }
 
   @include mixins.onMobile {
     .sec5-card {
-      .photo { width: 80px; margin-bottom: 10px; }
-      .rating { font-size: 18px; margin-bottom: 10px; }
-      .description { font-size: 14px; }
-      .name { font-size: 16px; }
-      .role { font-size: 13px; }
+      span {
+        &.photo {
+          margin-bottom: 3px;
+        }
+        &.rating {
+          font-size: 18px;
+          margin-bottom: 3px;
+        }
+        &.name {
+          margin-bottom: 0;
+        }
+        &.role {
+          font-size: 13px;
+        }
+      }
+    }
+    .sec5-stats {
+      gap: 5px;
+    }
+    .sec5-stats-block {
+      padding: 3px;
     }
   }
-
-    .sec5-stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-
-    @include mixins.onLargeDesktop {
-      gap: 25px;
-    }
-
-    @include mixins.onSmallDesktop {
-      gap: 20px;
-    }
-
-    @include mixins.onSmallTablet {
-      gap: 15px;
-    }
-
-    @include mixins.onMobile {
-      gap: 10px;
-      flex-direction: column;
-    }
-
-    .sec5-stats-block {
-      width: 210px;
-      aspect-ratio: 1 / 1;
-      border-radius: 50%;
-      background-color: #f1f1f1;
-      border: solid 2px #7eb693;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      p {
-        text-align: center;
-        font-size: 18px;
-
-        strong {
-          font-size: 50px;
-
-          @include mixins.onSmallTablet {
-            font-size: 40px;
-          }
-
-          @include mixins.onMobile {
-            font-size: 35px;
-          }
-        }
-
-        @include mixins.onSmallTablet {
-          font-size: 16px;
-        }
-
-        @include mixins.onMobile {
-          font-size: 14px;
-        }
-      }
-
-      @include mixins.onSmallTablet {
-        width: 170px;
-      }
-
-      @include mixins.onMobile {
-        width: 140px;
-      }
-    }
-    }
 }
 
 .sec-6{

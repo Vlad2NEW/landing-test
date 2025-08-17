@@ -2,16 +2,37 @@
 @use './_mixins' as mixins;
 
 header {
+  @include mixins.onLargeTablet {
+    .features {
+      .cart {
+        position: fixed;
+        bottom: 20px;
+        right:
+          20px;
+        background-color: vars.$white-color;
+        z-index: 2;
+
+        .cart-icon {
+          margin-right: 0;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; 
-  background-color: vars.$white-color; 
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+  z-index: 1000;
+  background-color: vars.$white-color;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
-  & + main {
-    margin-top: 120px; 
+  &+main {
+    margin-top: 120px;
   }
 
   color: vars.$text-color;
@@ -29,17 +50,18 @@ header {
     ul {
       li {
         margin-right: 30px;
-  
+
         &:last-child {
           margin-right: 0;
         }
-        
+
         a {
           font-size: 20px;
           font-weight: 700;
           padding: 5px 0;
-          color:vars.$text-color;
-          &:hover{
+          color: vars.$text-color;
+
+          &:hover {
             color: vars.$accent-green-color
           }
         }
@@ -69,12 +91,15 @@ header {
           border-color: vars.$accent-green-color;
         }
       }
-      .search-btn{
+
+      .search-btn {
         background-color: vars.$primary-bg-color;
-        &:hover{
+
+        &:hover {
           border-color: vars.$hover-bg-color;
         }
       }
+
       button {
         position: absolute;
         top: 50%;
@@ -111,8 +136,8 @@ header {
       }
 
       .cart .cart-icon {
-      background-color: vars.$burger-icon-color;
-    }
+        background-color: vars.$burger-icon-color;
+      }
 
       p {
         font-size: 18px;
@@ -144,7 +169,7 @@ header {
       .search {
         width: 305px;
         margin-right: 15px;
-  
+
         input {
           height: 50px;
         }
@@ -155,17 +180,17 @@ header {
           height: 45px;
         }
       }
-  
+
       .cart {
         .cart-icon {
           width: 40px;
           height: 40px;
-  
+
           img {
             width: 20px;
           }
         }
-  
+
         p {
           font-size: 16px;
         }
@@ -219,11 +244,11 @@ header {
 
           height: 40px;
         }
-  
+
         button {
           width: 35px;
           height: 35px;
-  
+
           img {
             width: 15px;
           }
@@ -316,12 +341,12 @@ header {
     .mobile-menu {
 
       .nav {
-      background-color: vars.$text-color;
+        background-color: vars.$text-color;
 
-      ul li a {
-        color: vars.$white-color;
+        ul li a {
+          color: vars.$white-color;
+        }
       }
-    }
 
       button.burger {
         height: 30px;
@@ -408,29 +433,38 @@ header {
 
       .nav {
         position: fixed;
-        top: 70px; left: 0; right: 0;
+        top: 70px;
+        left: 0;
+        right: 0;
         height: max-content;
         padding: 20px 20px 30px;
         background-color: vars.$text-color;
         transform: translateX(-100%);
         transition: transform 0.2s linear;
 
-        &.visible { transform: translateY(0); }
+        &.visible {
+          transform: translateY(0);
+        }
 
         ul {
           li {
-            text-align: center; color: vars.$white-color;
-            width: 80%; margin: 0 auto 15px;
+            text-align: center;
+            color: vars.$white-color;
+            width: 80%;
+            margin: 0 auto 15px;
             padding-bottom: 7px;
             border-bottom: solid 1px vars.$white-color;
 
-            &:last-child { margin-bottom: 0; }
+            &:last-child {
+              margin-bottom: 0;
+            }
 
-            a { font-size: 14px; }
+            a {
+              font-size: 14px;
+            }
           }
         }
       }
     }
   }
 }
-
